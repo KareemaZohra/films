@@ -15,4 +15,4 @@ Route::get('/', 'PagesController@index')->name('index');
 Route::get('/film', 'PagesController@film')->name('films');
 Route::get('/single', 'PagesController@single')->name('slug');
 Route::get('/create', 'PagesController@create')->name('create');
-Route::get('/store', 'PagesController@store')->name('store');
+Route::post('/store', 'PagesController@store')->name('store');

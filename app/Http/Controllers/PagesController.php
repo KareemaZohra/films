@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\film;
+use App\create;
 
 class PagesController extends Controller
 {
@@ -21,16 +22,17 @@ class PagesController extends Controller
     public function create (){
     	return view('create');
     }
+    
     public function store (Request $request){
-    	$films = new $film;
+    	$film = new film;
     	$film->fname = $request->title;
     	$film->description = $request->desc;
     	$film->release_date = $request->rd;
+    	$film->rating = 5;
     	$film->ticket_price = $request->price;
     	$film->country = $request->country;
     	$film->genere = $request->genere;
     	$film->image = $request->cover;
-    	$film->save();
 
     	return redirect()->route('create');
     }
