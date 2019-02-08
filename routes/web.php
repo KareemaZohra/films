@@ -13,3 +13,5 @@
 
 Route::get('/', 'PagesController@index');
 Route::get('/film', 'PagesController@film');
+Route::get('/single', 'PagesController@single');
+Route::get('/create', 'PagesController@create');

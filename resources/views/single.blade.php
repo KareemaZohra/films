@@ -46,30 +46,15 @@
     </nav>
     </div>
     <br>
-    <section id="all-films">
+    <section id="single-film">
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
-                    <a href="films.html">
-                        <img src="{{asset('images/10.jpeg')}}" class="img-fluid">
-                   </a>
-                    <h3 class="text-center">Film-1</h3>
-                    <p class="desc" class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, deserunt?</p>
-                </div>
-                <div class="col-md-3">
-                    <img src="{{asset('images/5.jpeg')}}" class="img-fluid">
-                    <h3 class="text-center">Film-2</h3>
-                    <p class="desc" class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, deserunt?</p>
-                </div>
-                <div class="col-md-3">
-                    <img src="{{asset('images/4.jpeg')}}" class="img-fluid">
-                    <h3 class="text-center">Film-3</h3>
-                    <p class="desc" class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, deserunt?</p>
-                </div>
-                <div class="col-md-3">
-                   <img src="{{asset('images/3.jpeg')}}" class="img-fluid">
-                   <h3 class="text-center">Film-4</h3>
-                    <p class="desc" class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, deserunt?</p>
+                <div class="col-md-12">
+                  <h1 class="text-center">Film Title</h1>
+                <br>
+                <img src="{{asset('images/7.jpeg')}}" class="img-fluid">
+                <p><b>Description</b>Various form elements have been rebooted for simpler base styles. Here are some of the most notable changesVarious form elements have been rebooted for simpler base styles. Here are some of the most notable changesVarious form elements have been rebooted for simpler base styles. Here are some of the most notable changesVarious form elements have been rebooted for simpler base styles. Here are some of the most notable changesVarious form elements have been rebooted for simpler base styles. Here are some of the most notable changesVarious form elements have been rebooted for simpler base styles. Here are some of the most notable changes
+                </p>
                 </div>
             </div>
         </div>

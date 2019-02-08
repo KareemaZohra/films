@@ -10,7 +10,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-       <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css')}}">
+    	<link rel="stylesheet" type="text/css" href="{{ asset('css/style.css')}}">
     </head>
     <body>
          <div class="container">
@@ -45,35 +45,7 @@
       </div>
     </nav>
     </div>
-    <br>
-    <section id="all-films">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <a href="films.html">
-                        <img src="{{asset('images/10.jpeg')}}" class="img-fluid">
-                   </a>
-                    <h3 class="text-center">Film-1</h3>
-                    <p class="desc" class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, deserunt?</p>
-                </div>
-                <div class="col-md-3">
-                    <img src="{{asset('images/5.jpeg')}}" class="img-fluid">
-                    <h3 class="text-center">Film-2</h3>
-                    <p class="desc" class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, deserunt?</p>
-                </div>
-                <div class="col-md-3">
-                    <img src="{{asset('images/4.jpeg')}}" class="img-fluid">
-                    <h3 class="text-center">Film-3</h3>
-                    <p class="desc" class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, deserunt?</p>
-                </div>
-                <div class="col-md-3">
-                   <img src="{{asset('images/3.jpeg')}}" class="img-fluid">
-                   <h3 class="text-center">Film-4</h3>
-                    <p class="desc" class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, deserunt?</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

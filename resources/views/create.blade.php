@@ -46,33 +46,62 @@
     </nav>
     </div>
     <br>
-    <section id="all-films">
+    <section id="create">
+      <h1 class="text-center"><u>Register New Movie</u></h1>
+      <br>
+      <form>
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
-                    <a href="films.html">
-                        <img src="{{asset('images/10.jpeg')}}" class="img-fluid">
-                   </a>
-                    <h3 class="text-center">Film-1</h3>
-                    <p class="desc" class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, deserunt?</p>
+                <div class="col-md-6">
+                  
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="title" placeholder="Movie Name ..." required>
+                    </div> 
+                    <div class="form-group">
+                      <textarea class="form-control" id="desc" placeholder="Movie description ..." rows="5" required></textarea>
+                    </div>
+              
+                    <div class="form-group">
+                      <label for="cover">Cover Image : </label>
+                      <input type="file" class="form-control-file" id="cover" required>
+                    </div>
+                  
                 </div>
-                <div class="col-md-3">
-                    <img src="{{asset('images/5.jpeg')}}" class="img-fluid">
-                    <h3 class="text-center">Film-2</h3>
-                    <p class="desc" class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, deserunt?</p>
+                <div class="col-md-6">
+                  <div class="form-group">
+                      <input type="date" class="form-control" id="rd" placeholder="Release Date ..." required>
+                    </div>
+                    <div class="form-group">
+                      <input type="number" class="form-control" id="price" placeholder="Ticket Price ..." required>
+                    </div>
+                    <div class="form-group">
+                      <label for="country">Country</label>
+                      <select class="form-control" id="country" required>
+                        <option>USA</option>
+                        <option>Bangladesh</option>
+                        <option>India</option>
+                        <option>France</option>
+                        <option>Korea</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="Genere">Genere</label>
+                      <select class="form-control" id="Genere" required>
+                        <option>Romantic</option>
+                        <option>Horror</option>
+                        <option>Art-film</option>
+                        <option>Fiction</option>
+                        <option>Action</option>
+                      </select>
+                    </div>
                 </div>
-                <div class="col-md-3">
-                    <img src="{{asset('images/4.jpeg')}}" class="img-fluid">
-                    <h3 class="text-center">Film-3</h3>
-                    <p class="desc" class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, deserunt?</p>
-                </div>
-                <div class="col-md-3">
-                   <img src="{{asset('images/3.jpeg')}}" class="img-fluid">
-                   <h3 class="text-center">Film-4</h3>
-                    <p class="desc" class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, deserunt?</p>
-                </div>
+                
             </div>
+            <div class="row text-center">
+                  <button type="submit">Add to Database</button>
+                </div>
         </div>
+        </form>
     </section>
 
     <!-- scripts -->
