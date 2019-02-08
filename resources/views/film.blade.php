@@ -24,13 +24,13 @@
       <div class="collapse navbar-collapse float-right" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="{{route('index')}}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="films.html">Films</a>
+            <a class="nav-link" href="{{route('films')}}">Films</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="add.html">Addnew</a>
+            <a class="nav-link" href="{{route('create')}}">Addnew</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="login.html">Log-in</a>
@@ -49,28 +49,17 @@
     <section id="all-films">
         <div class="container">
             <div class="row">
+
+              @foreach ($films as $film)
                 <div class="col-md-3">
                     <a href="films.html">
-                        <img src="{{asset('images/10.jpeg')}}" class="img-fluid">
+                        <img src="{{$film->image}}" class="img-fluid">
                    </a>
-                    <h3 class="text-center">Film-1</h3>
-                    <p class="desc" class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, deserunt?</p>
+                    <h3 class="text-center">{{$film->fname}}</h3>
+                    <p class="desc" class="text-center">{{$film->description}}</p>
                 </div>
-                <div class="col-md-3">
-                    <img src="{{asset('images/5.jpeg')}}" class="img-fluid">
-                    <h3 class="text-center">Film-2</h3>
-                    <p class="desc" class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, deserunt?</p>
-                </div>
-                <div class="col-md-3">
-                    <img src="{{asset('images/4.jpeg')}}" class="img-fluid">
-                    <h3 class="text-center">Film-3</h3>
-                    <p class="desc" class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, deserunt?</p>
-                </div>
-                <div class="col-md-3">
-                   <img src="{{asset('images/3.jpeg')}}" class="img-fluid">
-                   <h3 class="text-center">Film-4</h3>
-                    <p class="desc" class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, deserunt?</p>
-                </div>
+                @endforeach
+
             </div>
         </div>
     </section>

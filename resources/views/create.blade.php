@@ -49,34 +49,35 @@
     <section id="create">
       <h1 class="text-center"><u>Register New Movie</u></h1>
       <br>
-      <form>
+      <form action="{{route('store')}}" method="post">
+        {{ csrf_field() }}
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
                   
                     <div class="form-group">
-                      <input type="text" class="form-control" id="title" placeholder="Movie Name ..." required>
+                      <input type="text" class="form-control" name="title" placeholder="Movie Name ..." required>
                     </div> 
                     <div class="form-group">
-                      <textarea class="form-control" id="desc" placeholder="Movie description ..." rows="5" required></textarea>
+                      <textarea class="form-control" name="desc" placeholder="Movie description ..." rows="5" required></textarea>
                     </div>
               
                     <div class="form-group">
                       <label for="cover">Cover Image : </label>
-                      <input type="file" class="form-control-file" id="cover" required>
+                      <input type="file" class="form-control-file" name="cover" required>
                     </div>
                   
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                      <input type="date" class="form-control" id="rd" placeholder="Release Date ..." required>
+                      <input type="date" class="form-control" name="rd" placeholder="Release Date ..." required>
                     </div>
                     <div class="form-group">
-                      <input type="number" class="form-control" id="price" placeholder="Ticket Price ..." required>
+                      <input type="number" class="form-control" name="price" placeholder="Ticket Price ..." required>
                     </div>
                     <div class="form-group">
                       <label for="country">Country</label>
-                      <select class="form-control" id="country" required>
+                      <select class="form-control" name="country" required>
                         <option>USA</option>
                         <option>Bangladesh</option>
                         <option>India</option>
@@ -86,7 +87,7 @@
                     </div>
                     <div class="form-group">
                       <label for="Genere">Genere</label>
-                      <select class="form-control" id="Genere" required>
+                      <select class="form-control" name="genere" required>
                         <option>Romantic</option>
                         <option>Horror</option>
                         <option>Art-film</option>
