@@ -33,8 +33,8 @@ class PagesController extends Controller
     	$film->country = $request->country;
     	$film->genere = $request->genere;
     	$film->image = $request->cover;
-
-    	return redirect()->route('create');
+    	$film->save();
+    	return redirect()->route('create')->with('success','Created Successfull!');
     }
 
 }

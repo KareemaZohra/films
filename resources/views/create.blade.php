@@ -48,6 +48,9 @@
     <br>
     <section id="create">
       <h1 class="text-center"><u>Register New Movie</u></h1>
+      @if(session('success'))
+      <p class="alert alert-success">{{ session('success') }}</p>
+      @endif
       <br>
       <form action="{{route('store')}}" method="post">
         {{ csrf_field() }}

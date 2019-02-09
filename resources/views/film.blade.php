@@ -53,7 +53,7 @@
               @foreach ($films as $film)
                 <div class="col-md-3">
                     <a href="films.html">
-                        <img src="{{$film->image}}" class="img-fluid">
+                        <img src="{{ asset('images/'.$film->image) }}" class="img-fluid">
                    </a>
                     <h3 class="text-center">{{$film->fname}}</h3>
                     <p class="desc" class="text-center">{{$film->description}}</p>
