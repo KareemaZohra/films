@@ -16,3 +16,4 @@ Route::get('/film', 'PagesController@film')->name('films');
 Route::get('/single', 'PagesController@single')->name('slug');
 Route::get('/create', 'PagesController@create')->name('create');
 Route::post('/store', 'PagesController@store')->name('store');
+Route::get('/film/{slug}', 'PagesController@single')->name('single');

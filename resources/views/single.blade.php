@@ -47,15 +47,26 @@
     </div>
     <br>
     <section id="single-film">
+        <h1 class="text-center">{{$film->fname}}</h1>
+        <br>
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                  <h1 class="text-center">Film Title</h1>
-                <br>
-                <img src="{{asset('images/7.jpeg')}}" class="img-fluid">
-                <p><b>Description</b>Various form elements have been rebooted for simpler base styles. Here are some of the most notable changesVarious form elements have been rebooted for simpler base styles. Here are some of the most notable changesVarious form elements have been rebooted for simpler base styles. Here are some of the most notable changesVarious form elements have been rebooted for simpler base styles. Here are some of the most notable changesVarious form elements have been rebooted for simpler base styles. Here are some of the most notable changesVarious form elements have been rebooted for simpler base styles. Here are some of the most notable changes
-                </p>
+                <div class="col-md-3">
+                  <div class="alert alert-primary" role="alert">
+                    Release Date : {{$film->release_date}}
+                  </div><div class="alert alert-primary" role="alert">
+                    Ticket Price : {{$film->ticket_price}}
+                  </div><div class="alert alert-primary" role="alert">
+                    Country : {{$film->country}}
+                  </div><div class="alert alert-primary" role="alert">
+                    Genere : {{$film->genere}}
+                  </div>
                 </div>
+                <div class="col-md-4">
+                  <img src="{{asset('images/'.$film->image)}}" class="img-fluid">
+                
+                </div>
+                <div class="col-md-5"><p>{{$film->description}}</p></div>
             </div>
         </div>
     </section>

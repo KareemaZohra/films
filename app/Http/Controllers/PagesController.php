@@ -16,9 +16,9 @@ class PagesController extends Controller
     	$films = film::orderBy('id','desc')->get();
     	return view('film')->with('films',$films);
     }
-    public function single (){
-    	return view('single');
-    }
+    // public function single (){
+    // 	return view('single');
+    // }
     public function create (){
     	return view('create');
     }
@@ -33,8 +33,20 @@ class PagesController extends Controller
     	$film->country = $request->country;
     	$film->genere = $request->genere;
     	$film->image = $request->cover;
+        $film->slug = str_slug($request->title);
     	$film->save();
     	return redirect()->route('create')->with('success','Created Successfull!');
     }
+
+     public function single ($slug){
+        $film = Film::where('slug',$slug)->first();
+        if(!is_null($film)){
+            return view('single',compact('film'));
+        }
+        else{
+            session()->flash('errors','Sorr there is no film in this url ....');
+            return redirect()->route('film');
+        }
+     }
 
 }

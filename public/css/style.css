@@ -25,20 +25,23 @@
 }
 /*single page*/
 #single-film img{
-	height: 200px;
-	width: 300px;
+	height: 230px;
+	width: 100%;
 	border: 2px solid darksalmon;
 	margin: 2%;
+	border-radius: 5px;
 }
 #single-film p{
 	padding: 2%;
-	color: darksalmon;
+	color: white;
+	background-color: darksalmon;
+	border-radius: 5px;
 }
 #single-film h1{
 	text-decoration: underline;
 }
 /*create*/
-#create button{
+#create button,.detail{
 	display: block;
 	margin: auto;
 	border: none;
@@ -49,4 +52,23 @@
 	font-size: 1.5em;
 	/*
 	box-shadow: 10px 10px 10px grey;*/
+}
+.detail{
+	display: block;
+	margin: auto;
+	border: none;
+	border-radius: 5px;
+	background: darksalmon;
+	color: white;
+	padding: 10px 30px;
+	font-size: 1em;
+	text-decoration: none;
+	margin-bottom: 50px;
+	/*
+	box-shadow: 10px 10px 10px grey;*/
+}
+.alert-primary{
+	background-color: black!important;
+	color: darksalmon;
+	border:none;
 }

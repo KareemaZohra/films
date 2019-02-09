@@ -55,9 +55,12 @@
                     <a href="films.html">
                         <img src="{{ asset('images/'.$film->image) }}" class="img-fluid">
                    </a>
-                    <h3 class="text-center">{{$film->fname}}</h3>
-                    <p class="desc" class="text-center">{{$film->description}}</p>
+                    <a href="{!! route('single', $film->slug) !!}"><h3 class="text-center">{{$film->fname}}</h3></a>
+                    <!-- {{str_slug($film->fname)}} -->
+                    
+                    <a href="{!! route('single', $film->slug) !!}" type="button" class="detail">View Details</a>
                 </div>
+                
                 @endforeach
 
             </div>

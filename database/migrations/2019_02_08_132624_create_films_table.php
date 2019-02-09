@@ -23,6 +23,7 @@ class CreateFilmsTable extends Migration
             $table->string('country');
             $table->string('genere');
             $table->binary('image');
+
         });
     }
 
