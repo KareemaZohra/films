@@ -79,7 +79,7 @@
                 
                     @auth
                        <h3>Post a comment : </h3>
-                       <form>
+                       <form action="{{route('comment_store')}}" method="post">
                           <div class="form-group">
                           <input type="text" class="form-control" name="c_name" placeholder="Your Name ..." required>
                           </div> 

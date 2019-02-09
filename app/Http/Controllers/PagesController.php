@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\film;
 use App\create;
+use App\comments;
 
 class PagesController extends Controller
 {
@@ -36,6 +37,15 @@ class PagesController extends Controller
         $film->slug = str_slug($request->title);
     	$film->save();
     	return redirect()->route('create')->with('success','Created Successfull!');
+    }
+
+    public function comment_store (Request $requ){
+        $comments = new comment;
+        $comments->title=$film->title;
+        $comments->username=$film->c_name;
+        $comments->comment=$film->comments;
+        $comments->save();
+        return redirect()->route('single')->with('success','Comment saved Successfully!');
     }
 
      public function single ($slug){
