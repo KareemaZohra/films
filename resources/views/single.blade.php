@@ -68,6 +68,30 @@
                 </div>
                 <div class="col-md-5"><p>{{$film->description}}</p></div>
             </div>
+            <div class="row">
+              <div class="offset-md-2 col-md-8">
+               @if (Route::has('login'))
+                
+                    @auth
+                       <h3>Post a comment : </h3>
+                       <form>
+                          <div class="form-group">
+                          <input type="text" class="form-control" name="c_name" placeholder="Your Name ..." required>
+                          </div> 
+                          <div class="form-group">
+                            <textarea class="form-control" name="comments" placeholder="Write Something ..." rows="2" required></textarea>
+                          </div>
+                          <div class="row text-center">
+                            <button type="submit">Comment</button>
+                          </div>
+                       </form>
+                    @else
+                        
+                    @endauth
+             
+            @endif
+          </div>
+            </div>
         </div>
     </section>
 

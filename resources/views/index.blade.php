@@ -32,15 +32,20 @@
           <li class="nav-item">
             <a class="nav-link" href="add.html">Addnew</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login.html">Log-in</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="register.html">Register</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="logout.html">Log-out</a>
-          </li>
+          
+           @if (Route::has('login'))
+                
+                    @auth
+                        <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Log-out</a></li>
+                    @else
+                        <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
+
+                        @if (Route::has('register'))
+                            <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">Register</a></li>
+                        @endif
+                    @endauth
+             
+            @endif
         </ul>
       </div>
     </nav>

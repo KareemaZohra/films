@@ -15,7 +15,9 @@
                     @endif
 
                     You are logged in!
+
                 </div>
+                <a class="nav-link" href="{{ route('index') }}" style="color: darksalmon"><-Back to Home</a>
             </div>
         </div>
     </div>

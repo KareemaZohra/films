@@ -41,7 +41,7 @@
 	text-decoration: underline;
 }
 /*create*/
-#create button,.detail{
+#create button ,#single-film button{
 	display: block;
 	margin: auto;
 	border: none;
@@ -50,6 +50,7 @@
 	color: black;
 	padding: 10px 50px;
 	font-size: 1.5em;
+	margin-bottom: 100px;
 	/*
 	box-shadow: 10px 10px 10px grey;*/
 }
