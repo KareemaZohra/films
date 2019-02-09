@@ -15,8 +15,8 @@
     <body>
          <div class="container">
 <!--   navbar starts-->
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href="#">Filomina</a>
+     <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="{{ route('index') }}">Filomina</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -24,23 +24,28 @@
       <div class="collapse navbar-collapse float-right" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="{{route('index')}}">Home</a>
+            <a class="nav-link" href="{{ route('index') }}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route('films')}}">Films</a>
+            <a class="nav-link" href="{{ route('films') }}">Films</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route('create')}}">Addnew</a>
+            <a class="nav-link" href="{{ route('create') }}">Addnew</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login.html">Log-in</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="register.html">Register</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="logout.html">Log-out</a>
-          </li>
+          
+           @if (Route::has('login'))
+                
+                    @auth
+                        <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Log-out</a></li>
+                    @else
+                        <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
+
+                        @if (Route::has('register'))
+                            <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">Register</a></li>
+                        @endif
+                    @endauth
+             
+            @endif
         </ul>
       </div>
     </nav>

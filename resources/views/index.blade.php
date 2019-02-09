@@ -16,7 +16,7 @@
          <div class="container">
 <!--   navbar starts-->
     <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href="#">Filomina</a>
+      <a class="navbar-brand" href="{{ route('index') }}">Filomina</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -24,13 +24,13 @@
       <div class="collapse navbar-collapse float-right" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="{{ route('index') }}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="films.html">Films</a>
+            <a class="nav-link" href="{{ route('films') }}">Films</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="add.html">Addnew</a>
+            <a class="nav-link" href="{{ route('create') }}">Addnew</a>
           </li>
           
            @if (Route::has('login'))
@@ -50,7 +50,19 @@
       </div>
     </nav>
     </div>
-    
+    <div class="container">
+       <div class="row">
+       <div class="col-md-12">
+        <br>
+        <h1 class="text-center">The Biggest Movie Database</h1>
+        <br>
+      <img src="{{ asset('images/mvi.jpeg')}}" class="img-fluid" style="height: 300px; width: 100%">
+      <br>
+      <br>
+      <a href="{{ route('films') }}" type="button" class="detail text-center" style="width: 50%"><b>Browse Films -></b></a>
+    </div>
+    </div>
+    </div>
 
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
